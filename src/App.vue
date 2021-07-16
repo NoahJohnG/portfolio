@@ -6,6 +6,9 @@
                     <router-link to="/" class="router-link">Projects</router-link>
                 </li>
                 <li>
+                    <router-link to="/about" class="router-link">About Me</router-link>
+                </li>
+                <li>
                     <router-link to="/contact" class="router-link">Contact</router-link>
                 </li>
                 <li class="mrg-l-auto">
@@ -34,6 +37,10 @@
     padding: 0;
 }
 
+::selection {
+    background: @ternary-color;
+}
+
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -42,7 +49,8 @@
 
     background-image:
         linear-gradient(0deg, fade(black, 60%), fade(black, 10%)),
-        url("assets/background.jpg");
+        url("assets/background.jpg"),
+        linear-gradient(0deg, @main-color, @main-color);
     background-size: cover;
 }
 
