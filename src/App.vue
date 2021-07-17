@@ -1,22 +1,29 @@
 <template>
     <header>
         <nav>
-            <ul>
-                <li>
-                    <router-link to="/" class="router-link">Projects</router-link>
+            <ul class="nav-list">
+                <li class="nav-list-item">
+                    <router-link to="/" class="router-link proj-dropdown-trigger">Projects</router-link>
+                    <div class="proj-dropdown">
+                        <ul>
+                            <li>Physical Chess AI</li>
+                            <li>Scheduling Service</li>
+                            <li>Synchronome</li>
+                        </ul>
+                    </div>
                 </li>
-                <li>
+                <li class="nav-list-item">
                     <router-link to="/about" class="router-link">About Me</router-link>
                 </li>
-                <li>
+                <li class="nav-list-item">
                     <router-link to="/contact" class="router-link">Contact</router-link>
                 </li>
-                <li class="mrg-l-auto">
+                <li class="mrg-l-auto nav-list-item">
                     <a href="https://www.linkedin.com/in/noah-j-gray" target="_blank" rel="noreferrer noopener">
                         <img alt="LinkedIn" src="/linkedin.png" />
                     </a>
                 </li>
-                <li>
+                <li class="nav-list-item">
                     <a href="https://www.github.com/NoahJohnG" target="_blank" rel="noreferrer noopener">
                         <img alt="Github.com" src="/github.png" />
                     </a>
@@ -28,6 +35,25 @@
         <router-view />
     </div>
 </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+    name: 'App',
+    data () {
+        return {
+            active: false,
+        }
+    },
+    methods: {
+        toggle_proj_dropdown: function () {
+            this.active = !this.active;
+        },
+    }
+})
+</script>
+
 
 <style lang="less">
 @import "global.less";
@@ -66,45 +92,75 @@ header {
         margin: 0 auto;
         position: relative;
 
-        ul {
+        .nav-list {
             list-style-type: none;
             margin: 0 auto;
             padding: 0;
             overflow: hidden;
             max-width: 90%;
             display: flex;
+        }
+
+        .nav-list-item {
+            float: left;
+            display: list-item;
+            text-align: -webkit-match-parent;
+            margin-left: 10px;
+
+            a {
+                display: block;
+                text-align: center;
+            }
+
+            .router-link {
+                padding: 14px 16px;
+                font-weight: bold;
+                text-decoration: none;
+                color: @text-color;
+            }
+
+            a.router-link-exact-active {
+                color: @link-color !important;
+            }
+
+            img {
+                padding: 8px 16px;
+                width: 1.6em;
+                height: 1.6em;
+
+                filter: invert(100%);
+                -webkit-filter: invert(100%);
+            }
+        }
+
+        .proj-dropdown {
+            display: none;
+            position: absolute;
+
+            padding: 0 @std_padding;
+
+            ul {
+                list-style-type: none;
+                background-color: @overlay;
+                border-radius: 5px 0px;
+            }
 
             li {
-                float: left;
-                display: list-item;
-                text-align: -webkit-match-parent;
-                margin-left: 10px;
-
-                a {
-                    display: block;
-                    text-align: center;
-                }
-
-                .router-link {
-                    padding: 14px 16px;
-                    font-weight: bold;
-                    text-decoration: none;
-                    color: @text-color;
-                }
-
-                img {
-                    padding: 8px 16px;
-                    width: 1.6em;
-                    height: 1.6em;
-
-                    filter: invert(100%);
-                    -webkit-filter: invert(100%);
-                }
-
-                a.router-link-exact-active {
-                    color: @link-color;
-                }
+                border-radius: inherit;
+                padding: 14px 16px;
             }
+
+            li:hover {
+                background-color: fade(@main-color, 90%);
+            }
+        }
+
+        .proj-dropdown-trigger:hover + .proj-dropdown {
+            display: block;
+        }
+
+        .proj-dropdown:hover {
+            display: block;
         }
     }
 }
