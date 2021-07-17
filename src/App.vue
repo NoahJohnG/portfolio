@@ -137,8 +137,6 @@ header {
             display: none;
             position: absolute;
 
-            padding: 0 @std_padding;
-
             ul {
                 list-style-type: none;
                 background-color: @overlay;
