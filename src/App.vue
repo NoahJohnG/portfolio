@@ -83,23 +83,18 @@ export default defineComponent({
 
 header {
     position: fixed;
-    padding: 0 @std-padding;
     background-color: @overlay;
     width: 100%;
     z-index: 1000;
 
     nav {
-        max-width: @max-content-width;
-        width: 100%;
         margin: 0 auto;
         position: relative;
 
         .nav-list {
             list-style-type: none;
             margin: 0 auto;
-            padding: 0;
             overflow: hidden;
-            max-width: 90%;
             display: flex;
         }
 
