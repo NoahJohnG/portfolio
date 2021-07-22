@@ -37,10 +37,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 
 export default defineComponent({
-    name: 'App',
+    name: "App",
     data () {
         return {
             active: false,
@@ -76,18 +76,20 @@ export default defineComponent({
     background-image:
         linear-gradient(0deg, fade(black, 60%), fade(black, 10%)),
         url("assets/background.jpg"),
-        linear-gradient(0deg, @main-color, @main-color);
+        linear-gradient(0deg, @primary-color, @primary-color);
     background-size: cover;
+    background-attachment: fixed;
 }
 
 header {
     position: fixed;
-    padding: 0 @std_padding;
+    padding: 0 @std-padding;
     background-color: @overlay;
     width: 100%;
+    z-index: 1000;
 
     nav {
-        max-width: 1600px;
+        max-width: @max-content-width;
         width: 100%;
         margin: 0 auto;
         position: relative;
@@ -149,7 +151,7 @@ header {
             }
 
             li:hover {
-                background-color: fade(@main-color, 90%);
+                background-color: fade(@primary-color, 90%);
             }
         }
 
