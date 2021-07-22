@@ -90,6 +90,8 @@ header {
     nav {
         margin: 0 auto;
         position: relative;
+        width: 90%;
+        max-width: @max-content-width;
 
         .nav-list {
             list-style-type: none;
