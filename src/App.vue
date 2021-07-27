@@ -65,6 +65,16 @@ export default defineComponent({
     background: @tertiary-color;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -78,6 +88,7 @@ export default defineComponent({
         linear-gradient(0deg, @primary-color, @primary-color);
     background-size: cover;
     background-attachment: fixed;
+
 }
 
 header {

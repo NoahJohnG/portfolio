@@ -2,7 +2,8 @@
     <div id="home">
         <h1>Hi, I'm Noah</h1>
         <h3>This is my portfolio website</h3>
-        <div class="content">
+        <a href="#content" class="down-arrow bounce" />
+        <div id="content">
             <div class="project-tiles">
                 <ProjectTile :key="project.name" v-for="project in projectList" :summary="project" />
             </div>
@@ -39,7 +40,7 @@ export default defineComponent({
     align-items: center;
     justify-content: center;
 
-    .content {
+    #content {
         background-image: linear-gradient(0deg, darken(@primary-color, 5%), @primary-color);
         position: absolute;
         top: 100vh;
@@ -55,5 +56,24 @@ export default defineComponent({
             justify-content: space-evenly;
         }
     }
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+.down-arrow {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -25px;
+
+    background: url("https://cdn-blmce.nitrocdn.com/JacqyZFxQpwHdBhotwjfAiEYlUcIzQnR/assets/static/optimized/rev-bd73137/wp-content/themes/loungelizard/assets/images/down@2x.png") no-repeat center;
+    background-size: 100%;
+    width: 50px;
+    height: 25px;
+
+    animation: bounce 0.5s ease-out alternate infinite;
 }
 </style>
