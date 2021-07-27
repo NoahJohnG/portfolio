@@ -31,9 +31,7 @@
             </ul>
         </nav>
     </header>
-    <div id="content">
-        <router-view />
-    </div>
+    <router-view />
 </template>
 
 <script lang="ts">
@@ -56,7 +54,7 @@ export default defineComponent({
 
 
 <style lang="less">
-@import "global.less";
+@import "@/global.less";
 
 * {
     margin: 0;
@@ -64,7 +62,7 @@ export default defineComponent({
 }
 
 ::selection {
-    background: @ternary-color;
+    background: @tertiary-color;
 }
 
 #app {
@@ -73,6 +71,7 @@ export default defineComponent({
     -moz-osx-font-smoothing: grayscale;
     color: @text-color;
 
+    height: 100vh;
     background-image:
         linear-gradient(0deg, fade(black, 60%), fade(black, 10%)),
         url("assets/background.jpg"),
@@ -160,11 +159,6 @@ header {
             display: block;
         }
     }
-}
-
-#content {
-    padding-top: 5vh;
-    height: 95vh;
 }
 
 .mrg-l-auto {
