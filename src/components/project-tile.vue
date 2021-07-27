@@ -31,6 +31,7 @@ export default defineComponent({
     background-image: linear-gradient(0deg, darken(@tertiary-color, 20%), @tertiary-color);
     height: 500px;
     width: 400px;
+    overflow: hidden;
     border-radius: 20px;
     display: flex;
     margin: 2em;
