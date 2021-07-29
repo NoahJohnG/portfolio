@@ -12,33 +12,22 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
 import ProjectTile from "@/components/project-tile.vue";
+import { defineComponent } from "vue";
+import { ProjectDescription } from "@/types"
 
 export default defineComponent({
     name: "Home",
     components: {
         ProjectTile
     },
+    computed: {
+        projectList: function(): Array<ProjectDescription> {
+            return this.$store.state.projectList
+        }
+    },
     data() {
         return {
-            projectList: [
-                {
-                    "name": "Physical Chess AI",
-                    "description": "Designed a chessboard that automatically detects a players move, tracks the board's state, and communicates an AI's response.",
-                    "image": "/chessboard.png"
-                },
-                {
-                    "name": "Scheduling Service",
-                    "description": "Implemented a real-time scheduling service using Lockheed Martin’s SmartSat™ SDK.",
-                    "image": "/SCRiPT.png"
-                },
-                {
-                    "name": "Some Networking Project",
-                    "description": "Did a thing or something.",
-                    "image": "/SCRiPT.png"
-                }
-            ]
         }
     }
 });
