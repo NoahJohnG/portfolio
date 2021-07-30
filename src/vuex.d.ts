@@ -1,9 +1,10 @@
+import { ViewName, ProjectDescription } from "@/types"
 import { ComponentCustomProperties } from "vue";
 import { Store } from "vuex"
 
 declare module "@vue/runtime-core" {
     interface State {
-        projectList: Array<ProjectDescription>;
+        projectList: Record<ViewName, ProjectDescription>;
     }
 
     interface ComponentCustomProperties {

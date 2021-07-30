@@ -6,9 +6,9 @@
                     <router-link to="/" class="router-link proj-dropdown-trigger">Projects</router-link>
                     <div class="proj-dropdown">
                         <ul>
-                            <li>Physical Chess AI</li>
-                            <li>Scheduling Service</li>
-                            <li>Synchronome</li>
+                            <li :key="key" v-for="(val, key) in projectList">
+                                <router-link :to="'/projects/' + key" class="router-link">{{ val.name }}</router-link>
+                            </li>
                         </ul>
                     </div>
                 </li>
@@ -35,10 +35,16 @@
 </template>
 
 <script lang="ts">
+import { ViewName, ProjectDescription } from "@/types"
 import { defineComponent } from "vue";
 
 export default defineComponent({
     name: "App",
+    computed: {
+        projectList: function(): Record<ViewName, ProjectDescription> {
+            return this.$store.state.projectList
+        }
+    },
     data () {
         return {
             active: false,
@@ -48,6 +54,17 @@ export default defineComponent({
         toggle_proj_dropdown: function () {
             this.active = !this.active;
         },
+    },
+    created() {
+        for (let key in this.projectList) {
+            let route = "/projects/" + key;
+            console.log("Registered (" + route + ") in routing table");
+            this.$router.addRoute({
+                path: route,
+                name: key,
+                component: () => import("@/views" + route)
+            })
+        }
     }
 })
 </script>
@@ -91,6 +108,12 @@ html {
 
 }
 
+.router-link {
+    font-weight: bold;
+    text-decoration: none;
+    color: @text-color;
+}
+
 header {
     position: fixed;
     background-color: @overlay;
@@ -123,9 +146,6 @@ header {
 
             .router-link {
                 padding: 14px 16px;
-                font-weight: bold;
-                text-decoration: none;
-                color: @text-color;
             }
 
             a.router-link-exact-active {

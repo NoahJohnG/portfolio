@@ -5,7 +5,7 @@
         <a href="#content" class="down-arrow bounce" />
         <div id="content">
             <div class="project-tiles">
-                <ProjectTile :key="project.name" v-for="project in projectList" :summary="project" />
+                <ProjectTile :key="key" v-for="(val, key) in projectList" :view="key" :description="val" class="router-link" />
             </div>
         </div>
     </div>
@@ -13,8 +13,8 @@
 
 <script lang="ts">
 import ProjectTile from "@/components/project-tile.vue";
+import { ViewName, ProjectDescription } from "@/types"
 import { defineComponent } from "vue";
-import { ProjectDescription } from "@/types"
 
 export default defineComponent({
     name: "Home",
@@ -22,7 +22,7 @@ export default defineComponent({
         ProjectTile
     },
     computed: {
-        projectList: function(): Array<ProjectDescription> {
+        projectList: function(): Record<ViewName, ProjectDescription> {
             return this.$store.state.projectList
         }
     },
