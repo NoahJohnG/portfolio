@@ -6,17 +6,17 @@ export default createStore({
         projectList: {
             "chess": {
                 "name": "Physical Chess AI",
-                "description": "Designed a chessboard that automatically detects a players move, tracks the board's state, and communicates an AI's response.",
+                "summary": "Designed a chessboard that automatically detects a players move, tracks the board's state, and communicates an AI's response.",
                 "image": "/chessboard.png"
             },
             "lockheed": {
                 "name": "Scheduling Service",
-                "description": "Implemented a real-time scheduling service using Lockheed Martin’s SmartSat™ SDK.",
+                "summary": "Implemented a real-time scheduling service using Lockheed Martin’s SmartSat™ SDK.",
                 "image": "/SCRiPT.png"
             },
             "portfolio": {
                 "name": "Portfolio",
-                "description": "Did a thing or something.",
+                "summary": "Did a thing or something.",
                 "image": "/SCRiPT.png"
             }
         }

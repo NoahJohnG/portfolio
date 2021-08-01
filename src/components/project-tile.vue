@@ -5,7 +5,7 @@
         </div>
         <div class="tile-info" v-if="hover">
             <h3>{{ projectInfo.name }}</h3>
-            <span>{{ projectInfo.description }}</span>
+            <span>{{ projectInfo.summary }}</span>
         </div>
     </router-link>
 </template>
