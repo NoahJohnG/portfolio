@@ -44,7 +44,7 @@ export default defineComponent({
     justify-content: center;
 
     #content {
-        background-image: linear-gradient(0deg, darken(@primary-color, 5%), @primary-color);
+        background: @content-background;
         position: absolute;
         top: 100vh;
         width: 100%;
