@@ -63,9 +63,14 @@ export default defineComponent({
                 path: route,
                 name: key,
                 component: () => import("@/views" + route)
-            })
+            });
         }
-    }
+
+        // Update router-view in case current location == one of the added routes
+        setTimeout(() => {
+            this.$router.replace(this.$router.currentRoute.value.fullPath);
+        }, 0)
+    },
 })
 </script>
 
