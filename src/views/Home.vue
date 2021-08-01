@@ -50,9 +50,7 @@ export default defineComponent({
         width: 100%;
 
         .project-tiles {
-            max-width: @max-content-width;
-            width: 90%;
-            margin: 0 auto;
+            &:extend(.content-width);
 
             display: flex;
             flex-wrap: wrap;

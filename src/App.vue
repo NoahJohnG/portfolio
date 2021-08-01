@@ -126,10 +126,9 @@ header {
     z-index: 1000;
 
     nav {
-        margin: 0 auto;
+        &:extend(.content-width);
+
         position: relative;
-        width: 90%;
-        max-width: @max-content-width;
 
         .nav-list {
             list-style-type: none;
