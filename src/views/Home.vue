@@ -5,7 +5,7 @@
         <a href="#content" class="down-arrow bounce" />
         <div id="content">
             <div class="project-tiles">
-                <ProjectTile :key="key" v-for="(val, key) in projectList" :view="key" :description="val" class="router-link" />
+                <ProjectTile :key="key" v-for="(val, key) in projectList" :view="key" :projectInfo="val" class="router-link" />
             </div>
         </div>
     </div>

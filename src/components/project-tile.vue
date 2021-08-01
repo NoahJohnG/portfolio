@@ -1,11 +1,11 @@
 <template>
     <router-link :to="'/projects/' + view" class="project-tile" @mouseover="hover = true" @mouseleave="hover = false">
         <div class="tile-overlay" v-if="!hover">
-            <h3>{{ description.name }}</h3>
+            <h3>{{ projectInfo.name }}</h3>
         </div>
         <div class="tile-info" v-if="hover">
-            <h3>{{ description.name }}</h3>
-            <span>{{ description.description }}</span>
+            <h3>{{ projectInfo.name }}</h3>
+            <span>{{ projectInfo.description }}</span>
         </div>
     </router-link>
 </template>
@@ -15,7 +15,7 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
     name: "ProjectTile",
-    props: ["view", "description"],
+    props: ["view", "projectInfo"],
     data() {
         return {
             hover: false
