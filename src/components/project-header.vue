@@ -1,8 +1,10 @@
 <template>
     <div class="project-header">
-        <h1>{{ name }}</h1>
-        <span>{{ role }} • {{ skills }} • {{ year }}</span>
-        <img :src="image" loading="lazy"/>
+        <h1>{{ projectInfo.name }}</h1>
+        <ul>
+            <li :key="keyword" v-for="keyword in projectInfo.keywords">{{ keyword }}</li>
+        </ul>
+        <p>{{ projectInfo.summary }}</p>
     </div>
 </template>
 
@@ -11,39 +13,44 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
     name: "ProjectHeader",
-    props: ["name", "role", "skills", "year", "image"]
+    props: ["projectInfo"]
 });
 </script>
 
 <style lang="less" scoped>
 @import "@/global.less";
 
-.project-tile {
-    background-image: linear-gradient(0deg, darken(@tertiary-color, 20%), @tertiary-color);
-    height: 500px;
-    width: 400px;
-    overflow: hidden;
-    border-radius: 20px;
-    display: flex;
-    margin: 2em;
-}
+.project-header {
+    &:extend(.content-width);
 
-.tile-content {
+    height: 80vh;
     display: flex;
     flex-direction: column;
-    flex: 1 0;
+    align-items: flex-start;
     justify-content: center;
-    align-items: center;
-    padding: @std-padding;
-}
 
-.tile-overlay {
-    &:extend(.tile-content);
-    background-color: fade(@primary-color, 70%);
-}
+    h1 {
+        margin: @std-padding 0;
+        font-size: 3em;
+    }
 
-.tile-info {
-    &:extend(.tile-content);
-    gap: 2em;
+    ul {
+        margin: @std-padding 0;
+        list-style-type: none;
+        display: flex;
+        
+        li {
+            margin: 0 @std-padding 0 0;
+            padding: @std-padding - 3px;
+            background-color: @tertiary-color;
+            border-radius: 1em;
+            font-size: 0.8em;
+        }
+    }
+
+    p {
+        margin: @std-padding 0;
+        max-width: 750px;
+    }
 }
 </style>
