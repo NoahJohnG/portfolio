@@ -13,11 +13,18 @@ export default createStore({
                 "image": string <- OPTIONAL
             }
             */
+            "portfolio": {
+                "name": "Portfolio",
+                "date": "June 2021",
+                "summary": "Did a thing or something.",
+                "keywords": ["Vue", "HTML", "Less", "Typescript"],
+                "image": "/SCRiPT.png"
+            },
             "chess": {
                 "name": "Physical Chess AI",
                 "date": "January 2021",
                 "summary": "Designed a chessboard that automatically detects a players move, tracks the board's state, and communicates an AI's response.",
-                "keywords": ["Embedded Systems", "C", "Circuit Design", "Linux"],
+                "keywords": ["Embedded Systems", "C", "Circuit Design", "Linux", "Soldering"],
                 "image": "/chessboard.png"
             },
             "lockheed": {
@@ -27,11 +34,18 @@ export default createStore({
                 "keywords": ["Python", "C++", "TCP/IP", "UI"],
                 "image": "/SCRiPT.png"
             },
-            "portfolio": {
-                "name": "Portfolio",
-                "date": "June 2021",
-                "summary": "Did a thing or something.",
-                "keywords": ["Vue", "HTML", "Less", "Typescript"],
+            "intel": {
+                "name": "Datacenter SSD Firmware Upgrade",
+                "date": "June 2020",
+                "summary": "Spearheaded project to greatly increase SSD firmware efficiency by migrating to 64-bit binaries on existing hardware platform.",
+                "keywords": ["C", "C++", "ARM Assembly", "Green Hills MULTI IDE"],
+                "image": "/SCRiPT.png"
+            },
+            "tatext": {
+                "name": "taText",
+                "date": "June 2019",
+                "summary": "Architected an SMS web-app that streamlines communication between recruiters and candidates.",
+                "keywords": ["SaS", "Vue", "HTML", "CSS", "Javascript"],
                 "image": "/SCRiPT.png"
             }
         }
