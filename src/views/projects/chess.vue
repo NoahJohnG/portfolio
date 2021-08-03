@@ -28,4 +28,8 @@ export default defineComponent({
 
 <style lang="less" scoped>
 @import "@/global.less";
+
+.chess {
+    &:extend(.content-width);
+}
 </style>

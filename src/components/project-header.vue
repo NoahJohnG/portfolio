@@ -21,8 +21,6 @@ export default defineComponent({
 @import "@/global.less";
 
 .project-header {
-    &:extend(.content-width);
-
     height: 80vh;
     display: flex;
     flex-direction: column;
