@@ -35,14 +35,14 @@ export default createStore({
                 "image": "/SCRiPT.png"
             },
             "intel": {
-                "name": "Datacenter SSD Firmware Upgrade",
+                "name": "SSD Firmware Upgrade",
                 "date": "June 2020",
                 "summary": "Spearheaded project to greatly increase SSD firmware efficiency by migrating to 64-bit binaries on existing hardware platform.",
                 "keywords": ["C", "C++", "ARM Assembly", "Green Hills MULTI IDE"],
                 "image": "/SCRiPT.png"
             },
             "tatext": {
-                "name": "taText",
+                "name": "TaText",
                 "date": "June 2019",
                 "summary": "Architected an SMS web-app that streamlines communication between recruiters and candidates.",
                 "keywords": ["SaS", "Vue", "HTML", "CSS", "Javascript"],

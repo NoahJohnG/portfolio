@@ -133,7 +133,6 @@ header {
 
         .nav-list {
             list-style-type: none;
-            margin: 0 auto;
             overflow: hidden;
             display: flex;
         }
@@ -144,12 +143,9 @@ header {
             text-align: -webkit-match-parent;
             margin-left: 10px;
 
-            a {
+            .router-link {
                 display: block;
                 text-align: center;
-            }
-
-            .router-link {
                 padding: 14px 16px;
             }
 
@@ -170,6 +166,10 @@ header {
         .proj-dropdown {
             display: none;
             position: absolute;
+
+            .router-link {
+                text-align: left;
+            }
 
             ul {
                 list-style-type: none;
