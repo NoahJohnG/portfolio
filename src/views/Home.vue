@@ -48,6 +48,7 @@ export default defineComponent({
         position: absolute;
         top: 100vh;
         width: 100%;
+        padding: 2em 0;
 
         .project-tiles {
             &:extend(.content-width);
