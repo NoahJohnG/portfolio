@@ -97,20 +97,21 @@ html {
     }
 }
 
-#app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: @text-color;
-
-    height: 100vh;
+body {
     background-image:
         linear-gradient(0deg, fade(black, 60%), fade(black, 10%)),
         url("assets/background.jpg"),
         linear-gradient(0deg, @primary-color, @primary-color);
     background-size: cover;
     background-attachment: fixed;
+}
 
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: @text-color;
+    height: 100vh;
 }
 
 .router-link {
