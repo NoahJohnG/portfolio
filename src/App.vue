@@ -154,6 +154,7 @@ header {
             list-style-type: none;
             overflow: hidden;
             display: flex;
+            align-items: center;
         }
 
         .nav-list-item {
@@ -172,9 +173,9 @@ header {
             }
 
             img {
-                padding: 8px 16px;
-                width: 1.6em;
-                height: 1.6em;
+                margin: 0 14px;
+                width: 1.5em;
+                height: 1.5em;
 
                 filter: invert(100%);
                 -webkit-filter: invert(100%);
@@ -192,11 +193,11 @@ header {
             ul {
                 list-style-type: none;
                 background-color: @overlay;
-                border-radius: 5px 0px;
+                border-radius: 0 0 5px 5px;
             }
 
             li {
-                border-radius: inherit;
+                border-radius: 5px;
                 padding: 14px 16px;
             }
 
