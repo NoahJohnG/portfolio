@@ -34,6 +34,13 @@ export default createStore({
                 "keywords": ["Python", "C++", "TCP/IP", "UI"],
                 "image": "/SCRiPT.png"
             },
+            "statistics": {
+                "name": "Joint Distribution Visualizer",
+                "date": "August 2020",
+                "summary": "Missed a statistics midterm smh",
+                "keywords": ["python", "statistics"],
+                "image": "/SCRiPT.png"
+            },
             "intel": {
                 "name": "SSD Firmware Upgrade",
                 "date": "June 2020",
@@ -46,6 +53,13 @@ export default createStore({
                 "date": "June 2019",
                 "summary": "Architected an SMS web-app that streamlines communication between recruiters and candidates.",
                 "keywords": ["SaS", "Vue", "HTML", "CSS", "Javascript"],
+                "image": "/SCRiPT.png"
+            },
+            "wasted": {
+                "name": "WastEd",
+                "date": "February 2019",
+                "summary": "Architected an SMS web-app that streamlines communication between recruiters and candidates.",
+                "keywords": ["Python", "Computer Vision", "Hackathon"],
                 "image": "/SCRiPT.png"
             }
         }
