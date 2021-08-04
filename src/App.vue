@@ -160,7 +160,6 @@ header {
             float: left;
             display: list-item;
             text-align: -webkit-match-parent;
-            margin-left: 10px;
 
             .router-link {
                 display: block;
