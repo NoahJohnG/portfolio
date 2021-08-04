@@ -104,6 +104,25 @@ body {
         linear-gradient(0deg, @primary-color, @primary-color);
     background-size: cover;
     background-attachment: fixed;
+    font-size: 22px;
+}
+
+@media ( max-width: 1739px ) {
+    body {
+        font-size: 20px;
+    }
+}
+
+@media ( max-width: 1399px ) {
+    body {
+        font-size: 18px;
+    }
+}
+
+@media ( max-width: 1199px ) {
+    body {
+        font-size: 16px;
+    }
 }
 
 #app {
