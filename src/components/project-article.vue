@@ -19,5 +19,6 @@ export default defineComponent({
     background: @content-background;
     border-radius: 5px;
     padding: 1em;
+    font-size: 1.25em;
 }
 </style>

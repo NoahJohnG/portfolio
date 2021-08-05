@@ -185,6 +185,7 @@ header {
         .proj-dropdown {
             display: none;
             position: absolute;
+            font-size: 0.8em;
 
             .router-link {
                 text-align: left;
@@ -198,7 +199,6 @@ header {
 
             li {
                 border-radius: 5px;
-                padding: 14px 16px;
             }
 
             li:hover {
