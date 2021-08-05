@@ -44,14 +44,16 @@
                 </ProjectSection>
             </ProjectSection>
         </ProjectArticle>
+        <ProjectInfoBox :projectInfo="projectInfo" />
         <br>
     </div>
 </template>
 
 <script lang="ts">
-import ProjectHeader from "@/components/project-header.vue";
+import ProjectInfoBox from "@/components/project-info-box.vue";
 import ProjectArticle from "@/components/project-article.vue";
 import ProjectSection from "@/components/project-section.vue";
+import ProjectHeader from "@/components/project-header.vue";
 import { ProjectDescription } from "@/types"
 import { defineComponent } from "vue";
 
@@ -60,7 +62,8 @@ export default defineComponent({
     components: {
         ProjectHeader,
         ProjectArticle,
-        ProjectSection
+        ProjectSection,
+        ProjectInfoBox
     },
     computed: {
         projectInfo: function(): ProjectDescription {
