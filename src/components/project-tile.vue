@@ -5,7 +5,7 @@
         </div>
         <div class="tile-info" v-if="hover">
             <h3>{{ projectInfo.name }}</h3>
-            <span>{{ projectInfo.summary }}</span>
+            <span>{{ summary100 }}</span>
         </div>
     </router-link>
 </template>
@@ -16,6 +16,20 @@ import { defineComponent } from "vue";
 export default defineComponent({
     name: "ProjectTile",
     props: ["view", "projectInfo"],
+    computed: {
+        summary100: function(): string {
+            // Returns project summary sliced to a max of 100 characters
+            if (this.projectInfo.summary.length > 100)
+            {
+                // Find last whole word that fits in 100 char limit
+                for (var _i = 97; this.projectInfo.summary[_i] != " "; _i--);
+
+                return this.projectInfo.summary.slice(0, _i) + "...";
+            }
+            
+            return this.projectInfo.summary;
+        }
+    },
     data() {
         return {
             hover: false
@@ -34,25 +48,25 @@ export default defineComponent({
     overflow: hidden;
     border-radius: 20px;
     display: flex;
-    margin: 2em;
+    margin: 1em;
 }
 
 .tile-content {
     display: flex;
     flex-direction: column;
     flex: 1 0;
-    justify-content: center;
-    align-items: center;
     padding: @std-padding;
+    justify-content: center;
 }
 
 .tile-overlay {
     &:extend(.tile-content);
+    align-items: center;
     background-color: fade(@primary-color, 70%);
 }
 
 .tile-info {
     &:extend(.tile-content);
-    gap: 2em;
+    gap: 1em;
 }
 </style>

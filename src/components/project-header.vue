@@ -21,11 +21,19 @@ export default defineComponent({
 @import "@/global.less";
 
 .project-header {
-    height: 80vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    margin: 0 15%;
+    padding-left: 1em;
+
+    @media ( max-width: 767px ) {
+        & {
+            margin: 0 5%;
+        }
+    }
 
     h1 {
         margin: @std-padding 0;

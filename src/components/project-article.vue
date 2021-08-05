@@ -18,7 +18,16 @@ export default defineComponent({
 .project-article {
     background: @content-background;
     border-radius: 5px;
+    margin: 0 15%;
     padding: 1em;
+
     font-size: 1.25em;
+    line-height: 1.5em;
+
+    @media ( max-width: 767px ) {
+        & {
+            margin: 0 5%;
+        }
+    }
 }
 </style>
