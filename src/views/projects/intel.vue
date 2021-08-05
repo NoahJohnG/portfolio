@@ -30,6 +30,6 @@ export default defineComponent({
 @import "@/global.less";
 
 .intel {
-    &:extend(.content-width);
+    .content-width;
 }
 </style>

@@ -51,7 +51,7 @@ export default defineComponent({
         padding: 2em 0;
 
         .project-tiles {
-            &:extend(.content-width);
+            .content-width;
 
             display: flex;
             flex-wrap: wrap;

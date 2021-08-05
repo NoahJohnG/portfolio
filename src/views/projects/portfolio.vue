@@ -30,6 +30,6 @@ export default defineComponent({
 @import "@/global.less";
 
 .portfolio {
-    &:extend(.content-width);
+    .content-width;
 }
 </style>

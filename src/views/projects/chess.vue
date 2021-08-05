@@ -81,6 +81,6 @@ export default defineComponent({
 @import "@/global.less";
 
 .chess {
-    &:extend(.content-width);
+    .content-width;
 }
 </style>

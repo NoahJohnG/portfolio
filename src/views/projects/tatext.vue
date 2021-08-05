@@ -30,6 +30,6 @@ export default defineComponent({
 @import "@/global.less";
 
 .tatext {
-    &:extend(.content-width);
+    .content-width;
 }
 </style>

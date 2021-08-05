@@ -146,7 +146,7 @@ header {
     z-index: 1000;
 
     nav {
-        &:extend(.content-width);
+        .content-width;
 
         position: relative;
 
