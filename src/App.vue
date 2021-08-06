@@ -16,7 +16,7 @@
                     <router-link to="/about" class="router-link">About Me</router-link>
                 </li>
                 <li class="nav-list-item">
-                    <router-link to="/contact" class="router-link">Contact</router-link>
+                    <a href="/NoahGrayResume.pdf" class="router-link" target="_blank" rel="noreferrer noopener">Resume</a>
                 </li>
                 <li class="mrg-l-auto nav-list-item">
                     <a href="https://www.linkedin.com/in/noah-j-gray" target="_blank" rel="noreferrer noopener">
