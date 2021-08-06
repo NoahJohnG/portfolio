@@ -55,7 +55,7 @@ export default createStore({
             "statistics": {
                 "name": "Joint Distribution Visualizer",
                 "role": "Student",
-                "orgs": "Cal Poly SLO",
+                "orgs": ["Cal Poly SLO"],
                 "summary": "Missed a statistics midterm smh",
                 "finished": true,
                 "start": new Date("August 2020"),
@@ -65,7 +65,7 @@ export default createStore({
             "intel": {
                 "name": "SSD Firmware Upgrade",
                 "role": "SSD Firmware Developement Intern",
-                "orgs": "Intel",
+                "orgs": ["Intel"],
                 "summary": "Spearheaded project to greatly increase SSD firmware efficiency by migrating to 64-bit binaries on existing hardware platform.",
                 "start": new Date("June 2020"),
                 "end": new Date("December 2020"),
@@ -80,7 +80,7 @@ export default createStore({
             "tatext": {
                 "name": "TaText",
                 "role": "Full Stack Developer",
-                "orgs": "Thirdpool Recruiting",
+                "orgs": ["Thirdpool Recruiting"],
                 "summary": "Architected an SMS web-app that streamlines communication between recruiters and candistarts.",
                 "finished": true,
                 "start": new Date("June 2019"),
@@ -95,7 +95,7 @@ export default createStore({
             "wasted": {
                 "name": "WastEd",
                 "role": "Software Developer",
-                "orgs": "Hackathon",
+                "orgs": ["Hackathon"],
                 "summary": "Architected an SMS web-app that streamlines communication between recruiters and candistarts.",
                 "finished": true,
                 "start": new Date("February 2019"),
