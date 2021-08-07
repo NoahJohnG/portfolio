@@ -3,15 +3,34 @@
         <ProjectHeader :projectInfo="projectInfo" />
         <ProjectArticle>
             <ProjectSection>
-                <template #title>Introduction</template>
+                <template #title>Pitch</template>
                 <p>
-                    Ad reprehenderit sunt cupidatat pariatur eiusmod ipsum est ex laborum. Exercitation aliquip exercitation fugiat anim veniam tempor dolore. Duis incididunt mollit ipsum mollit ullamco. Ullamco in consequat proident velit veniam consequat ut anim est cupidatat ut aliquip exercitation. Reprehenderit consequat nulla nulla minim et labore. Tempor aute esse laborum magna magna. Fugiat sit ea ea eiusmod nulla qui excepteur eu nostrud culpa et laborum commodo.
+                    Minim cillum excepteur ullamco est. Sit nisi sunt fugiat magna fugiat aliquip quis voluptate esse ea dolore sunt. Reprehenderit id adipisicing ea ex sunt esse ea commodo. Minim nulla duis reprehenderit excepteur aliquip ut tempor ad proident culpa cillum sint do. Ea ipsum labore aute laboris aliquip aliqua dolore. Ullamco elit veniam aute commodo reprehenderit aute labore.
                 </p>
                 <p>
-                    Mollit ad sunt reprehenderit nostrud id aute aute excepteur. Tempor commodo nisi consectetur consectetur esse fugiat. Incididunt Lorem incididunt minim sit id eu esse non dolor aliqua.
+                    Proident anim sit in dolor esse veniam ea cillum dolor voluptate enim esse aute sunt. Aute aute occaecat aliqua non Lorem culpa est sunt nulla excepteur deserunt eiusmod aliquip consectetur. Adipisicing nostrud labore ut ea ea nostrud fugiat excepteur occaecat ullamco ut reprehenderit dolore. Commodo mollit qui veniam dolor anim. Occaecat magna commodo fugiat tempor ea consequat dolore ipsum. Id fugiat aliqua ex eiusmod duis non irure dolore laboris.
+                </p>
+            </ProjectSection>
+            <ProjectSection>
+                <template #title>Design</template>
+                <p>
+                    Reprehenderit exercitation laborum eu commodo exercitation. Dolore officia reprehenderit et dolore excepteur. Cillum fugiat ad labore ut amet nisi laborum commodo do ut.
                 </p>
                 <p>
-                    In commodo veniam amet veniam. Lorem quis nisi proident aliquip nulla deserunt pariatur aute laboris qui duis amet sunt. Nisi esse adipisicing aliqua culpa sint.
+                    Non consectetur minim adipisicing voluptate. Ex Lorem consectetur minim ex tempor. Duis magna ullamco nulla veniam.
+                </p>
+                <p>
+                    Deserunt nostrud labore nostrud esse. Officia mollit laborum commodo consequat aliquip elit aliquip ut cillum mollit esse. Mollit labore incididunt et nisi consequat. Qui minim ullamco laborum irure. Cillum elit aliquip exercitation anim amet sint in excepteur veniam ipsum aliqua.
+                </p>
+            </ProjectSection>
+            <ProjectSection>
+                <template #title>Deliverable</template>
+                <p>
+                    Et deserunt sunt consequat tempor elit. Officia dolor tempor eu id. Eiusmod ullamco voluptate cupidatat laborum enim incididunt cupidatat. Cupidatat et Lorem ut qui sunt exercitation fugiat duis ex sunt pariatur adipisicing veniam amet. Quis nisi aliqua duis mollit culpa ex nulla mollit nulla ut ad laboris reprehenderit. Nostrud ea nostrud incididunt aute voluptate dolore ex mollit irure elit sunt id tempor nisi.
+                </p>
+                <!-- Insert the demo video here -->
+                <p>
+                    Cillum ut veniam eu sint sunt nulla. Dolore occaecat enim in id magna voluptate nulla sit qui dolor adipisicing duis fugiat laboris. Ullamco consequat enim occaecat proident enim ex anim. Occaecat labore Lorem excepteur consequat. Do culpa velit veniam voluptate sint voluptate.
                 </p>
             </ProjectSection>
         </ProjectArticle>
